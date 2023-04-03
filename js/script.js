@@ -24,10 +24,10 @@ let songs=[
 masterPlay.addEventListener('click',()=>{
 	if(audioElement.paused || audioElement.currentTime<=0){
 		audioElement.play()
-                document.getElementById('masterPlay').src='../icons/pause_circle_FILL0_wght400_GRAD0_opsz48.svg'
+                masterPlay.src='../icons/pause_circle_FILL0_wght400_GRAD0_opsz48.svg'
 	}else{
 		audioElement.pause();
-		document.getElementById('masterPlay').src='../icons/play_circle_FILL0_wght400_GRAD0_opsz48.svg'
+		masterPlay.src='../icons/play_circle_FILL0_wght400_GRAD0_opsz48.svg'
 	}
 })
 
