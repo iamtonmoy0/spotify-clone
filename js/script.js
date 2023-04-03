@@ -2,7 +2,8 @@
 let songIndex=0;
 let audioElement= new Audio('../music/Apocalypse - Cigarettes After Sex(MP3_160K).mp3')
 let masterPlay=document.getElementById('masterPlay')
-let progressBat= document.getElementById('progressBar')
+let progressBar= document.getElementById('progressBar')
+let icon=document.getElementById('icons')
 // songs
 let songs=[
 	{songName:"Apocalypse",filePath:"../music/Apocalypse - Cigarettes After Sex(MP3_160K).mp3" ,coverPath:"../music/Apocalypse - Cigarettes After Sex(MP3_160K).mp3"},
@@ -17,3 +18,19 @@ let songs=[
 	{songName:"Young",filePath:"../music/Young _ Dumb - Cigarettes After Sex(MP3_160K).mp3" ,coverPath:"../music/Young _ Dumb - Cigarettes After Sex(MP3_160K).mp3"},
 
 ]
+
+
+// play and pause
+masterPlay.addEventListener('click',()=>{
+	if(audioElement.paused || audioElement.currentTime<=0){
+		audioElement.play()
+                document.getElementById('masterPlay').src='../icons/pause_circle_FILL0_wght400_GRAD0_opsz48.svg'
+	}else{
+		audioElement.pause();
+		document.getElementById('masterPlay').src='../icons/play_circle_FILL0_wght400_GRAD0_opsz48.svg'
+	}
+})
+
+progressBar.addEventListener('timeupdate',()=>{
+	console.log('time ')
+})
