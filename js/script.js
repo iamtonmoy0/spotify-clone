@@ -4,6 +4,7 @@ let audioElement= new Audio('../music/Apocalypse - Cigarettes After Sex(MP3_160K
 let masterPlay=document.getElementById('masterPlay')
 let progressBar= document.getElementById('progressBar')
 let icon=document.getElementById('icons')
+let gif = document.getElementById('gif')
 // songs
 let songs=[
 	{songName:"Apocalypse",filePath:"../music/Apocalypse - Cigarettes After Sex(MP3_160K).mp3" ,coverPath:"../music/Apocalypse - Cigarettes After Sex(MP3_160K).mp3"},
@@ -24,10 +25,12 @@ let songs=[
 masterPlay.addEventListener('click',()=>{
 	if(audioElement.paused || audioElement.currentTime<=0){
 		audioElement.play()
-                masterPlay.src='../icons/pause_circle_FILL0_wght400_GRAD0_opsz48.svg'
+                masterPlay.src='../icons/pause-button.png'
+		gif.style.opacity='1';
 	}else{
 		audioElement.pause();
-		masterPlay.src='../icons/play_circle_FILL0_wght400_GRAD0_opsz48.svg'
+		masterPlay.src='../icons/play-button.png'
+		gif.style.opacity='0';
 	}
 })
 
