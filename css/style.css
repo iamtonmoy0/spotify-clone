@@ -8,7 +8,7 @@
 	padding: 0;
 }
 body{
-	background-color: antiquewhite;
+	background-image: url('../images/back.jpg');
 }
 /* nav css */
 nav{
@@ -49,10 +49,16 @@ nav ul li{
 }
 
 .container{
-	min-height:75vh ;
+	min-height:72vh ;
 	background-color: black;
 	font-family: Verdana, sans-serif;
 	color: white;
+	display: flex;
+	margin: 23px auto;
+	width: 70%;
+	border-radius:12px ;
+	padding: 34px;
+	background-image: url('../images/images.jpeg');
 }
 #progressBar{
 	width: 80vw;
